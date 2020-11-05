@@ -1,0 +1,238 @@
+div#Banner {
+  background-color: var(--color-primary-4);
+  padding: 0.125em;
+
+  /* height:calc(var(--name-base-size) + var(--job-scope-size)); */
+}
+div#Banner div#about-container {
+  display: grid;
+  grid-template-rows: 1fr auto auto auto;
+  grid-template-columns: 1fr 1.5fr;
+  font-size: 1.36em;
+  font-size: calc(1em + 4vw);
+}
+div#Banner div#about-container h1#name {
+  font-size: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+div#Banner div#about-container h2#job-scope,
+div#Banner div#about-container h3#job-title {
+  font-size: 0.55em;
+  /* text-align: center; */
+}
+div#Banner div#about-container h1#name,
+div#Banner div#about-container h2#job-scope,
+div#Banner div#about-container h3#job-title {
+  line-height: 1em;
+}
+
+div#Banner h1,
+div#Banner h2,
+div#Banner h3 {
+  margin: 0;
+}
+
+div#Banner #about-container {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#Banner #about-container #profile-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+@media screen and (min-width: 12.5em) {
+  div#Banner div#about-container {
+    font-size: 1.97em;
+    font-size: calc(1em + 7.5vw);
+  }
+}
+/* this media query targets 320px in EMs */
+@media screen and (min-width: 20em) {
+  div#Banner div#about-container {
+    font-size: 3.1em;
+    font-size: calc(1em + 10.5vw);
+  }
+}
+
+/* this media query targets 375px in EMs */
+@media screen and (min-width: 23.4375em) {
+  div#Banner div#about-container {
+    font-size: 3.7em;
+    font-size: calc(1em + 11.515vw);
+  }
+}
+/* this media query targets  >=425px in EMs */
+@media screen and (min-width: 26.5625em) {
+  div#Banner div#about-container {
+    font-size: 4.21em;
+    font-size: calc(1em + 12.1vw);
+  }
+  div#Banner div#about-container h2#job-scope {
+    font-size: 0.93125em;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  div#Banner div#about-container h3#job-title {
+    font-size: 0.62em;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  div#Banner div#about-container div#profile-links {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-items: left; */
+    justify-content: space-evenly;
+    /* align-content: left;  */
+    /* align-items: left; */
+  }
+}
+/* this media query targets 768px in EMs */
+@media screen and (min-width: 48em) {
+  div#Banner div#about-container {
+    font-size: 7.75em;
+    font-size: calc(1em + 14.125vw);
+  }
+}
+/* this media query targets 1024px in EMs */
+@media screen and (min-width: 64em) {
+  div#Banner div#about-container {
+    font-size: 10.45em;
+    font-size: calc(1em + 14.761vw);
+  }
+}
+/* this media query targets 1440px in EMs */
+@media screen and (min-width: 90em) {
+  div#Banner div#about-container {
+    font-size: 14.79em;
+  }
+}
+/* for some reason, 
+   google chrome calcualtes EM units differently than firefox and microsoft edge */
+@supports (-moz-appearance: initial) or (display: -ms-grid) {
+  /* this media query targets 320px in EMs */
+  @media screen and (min-width: 20em) {
+    div#Banner div#about-container {
+      font-size: 3em;
+      font-size: calc(1em + 10vw);
+    }
+  }
+  /* this media query targets 425px in EMs */
+  @media screen and (min-width: 26.5625em) {
+    div#Banner div#about-container {
+      font-size: 4.055em;
+      font-size: calc(1em + 11.5vw);
+    }
+  }
+  /* this media query targets 768px in EMs */
+  @media screen and (min-width: 48em) {
+    div#Banner div#about-container {
+      font-size: 7.5em;
+      font-size: calc(1em + 13.55vw);
+    }
+  }
+  /* this media query targets 1024px in EMs */
+  @media screen and (min-width: 64em) {
+    div#Banner div#about-container {
+      font-size: 10em;
+      font-size: calc(1em + 14vw);
+    }
+  }
+  /* this media query targets 1440px in EMs */
+  @media screen and (min-width: 90em) {
+    div#Banner div#about-container {
+      font-size: 14.125em;
+    }
+  }
+  /* this media query targets 2560px in EMs */
+}
+
+@media screen and (min-width: 425px) {
+  div#Banner div#about-container {
+    grid-template-columns: 4em 1fr;
+    grid-template-rows: 1.3em 1em 0.65em;
+  }
+  div#Banner div#about-container #name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  div#Banner div#about-container #job-scope {
+    font-size: 1em;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    vertical-align: bottom;
+  }
+  div#Banner div#about-container #job-title {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  #Banner #profile-links {
+    display: grid;
+    justify-content: left;
+    align-items: space-evenly;
+    flex-direction: column;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  #Banner #profile-links * {
+    display: block;
+    font-size: 0.8em;
+  }
+}
+/* 
+    The subheadings will be layed out as follows:
+    
+    the smallest heading will be 1.16 times the base font size
+    the second smallest heading will be 1.75 times the font size
+    then the main heading will be 2.67 times the font size
+
+
+*/
+/* reset the styles and provide defaults*/
+#Banner .subheading h1,
+#Banner .subheading h2,
+#Banner .subheading h3 {
+  margin: 0px;
+  padding: 0px;
+}
+#profile-links .profile-link {
+}
+#Banner #profile-links img {
+  /* 
+    I will have to play with the font sizes later
+    
+    */
+  width: auto;
+  height: 1em;
+}
+#Banner #profile-links > a > img {
+  background-color: white;
+}
+#Banner img#github-logo {
+  /* border:0px solid; */
+
+  border-radius: 51%;
+}
+#Banner img#linkedin-logo {
+  /* border:0px solid; */
+
+  border-radius: 8%;
+}

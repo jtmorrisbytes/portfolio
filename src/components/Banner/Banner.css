@@ -1,0 +1,74 @@
+#Banner {
+  background-color: var(--color-primary-4);
+  display: grid;
+  /* grid-template-rows: auto, auto; */
+  /* font-size: 125%; */
+  grid-template-columns: 95%;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas:
+    "a"
+    "i"
+    "lnk"
+    "b";
+}
+#Banner .info {
+  grid-area: i;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+#Banner .name {
+  grid-area: n;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#Banner .avatar {
+  grid-area: a;
+  /* max-width: 125px; */
+  /* max-height: 125px; */
+  max-width: 100%;
+  max-height: 10em;
+  display: none;
+
+  /* max-height: 250px; */
+}
+#Banner .phone {
+  grid-area: p;
+}
+#Banner .email {
+  grid-area: e;
+}
+#Banner .phone,
+#Banner .email {
+  text-decoration: none;
+}
+#Banner .bio {
+  grid-area: b;
+}
+#Banner .links {
+  grid-area: lnk;
+}
+#Banner .links img {
+  max-width: 2em;
+}
+
+#Banner .job-title {
+  grid-area: t;
+  margin-top: 0;
+
+  margin-bottom: 0;
+}
+@media screen and (min-width: 630px) {
+  #Banner .avatar {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 9em;
+  }
+  #Banner {
+    /* grid-template-rows: 150px; */
+    font-size: calc(1rem + 1vw);
+    grid-template-rows: 9em;
+    grid-template-columns: 1fr 10.5em auto 1fr;
+    grid-template-areas: ". a i .";
+  }
+}

@@ -1,0 +1,61 @@
+#Contact {
+  background-color: var(--color-primary-2);
+  flex-direction: column;
+  text-align: center;
+}
+
+#Contact form input,
+#Contact form textarea {
+  width: 100%;
+  font-size: calc(1em + 0.5vw);
+  box-sizing: border-box;
+}
+
+#Contact h2 {
+  font-size: calc(1.5em + 1vw);
+}
+#Contact #contact-content-container {
+  max-width: 1408px;
+  max-width: 88em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Contact form label {
+  display: none;
+}
+#Contact > #profile-links {
+  display: flex;
+  flex-direction: row;
+}
+#Contact form textarea {
+  min-height: 10em;
+  min-height: calc(10em + 0.5vw);
+  max-height: 20em;
+  max-height: calc(20em + 0.5vw);
+  max-width: 100%;
+  min-width: 100%;
+  /* width: 100%; */
+}
+#Contact form input:not([type="submit"]) {
+  min-height: 3em;
+  min-height: calc(3em + 0.5vw);
+}
+#Contact form input[type="submit"],
+#Contact form a[type="submit"] {
+  font-size: calc(1em + 0.825vw);
+}
+@media (min-width: 90em) {
+  #Contact #contact-form-header {
+    font-size: 2.9em;
+  }
+  #Contact form input:not([type="submit"]) {
+    min-height: 3.45em;
+  }
+  #Contact form input[type="submit"] {
+    font-size: 1.7425em;
+  }
+  #Contact form textarea {
+    min-height: 10.45em;
+    max-height: 20.45em;
+  }
+}

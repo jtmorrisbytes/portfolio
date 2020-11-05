@@ -1,0 +1,96 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap'); */
+
+
+@import url("./assets/fonts/TenbyFive/TenbyFive.css");
+/* @import url("./assets/fonts/TenbyFourLight/TenbyFourLight.css"); */
+@import url("./brand-colors.css");
+html {
+  /* font-size: calc(100% + 1vw); */
+}
+
+
+body{
+  font-size: 1rem;
+
+  /* font-family: Roboto, serif; */
+}
+body * {
+  /* line-height: 1.2rem; */
+}
+div, p, button, label {
+  font-size: 1em;
+}
+h1,h2,h3,h4,h5,h6,label, button, footer *, a {
+  font-family: TenbyFive, sans-serif;
+  /* line-height: 2.825rem; */
+  
+}
+
+
+div > h1.v-center, div > h2.v-center,  div > h3.v-center, div >  h4.v-center, div > h5.v-center, div > h6.v-center {
+  vertical-align: center;
+}
+#root {
+  background-color: var(--color-complement-0)
+}
+/* I want all button to be styled like this */
+
+/* the css variables used to help calculate values */
+a[type='button'], a[type='button']:link,
+a[type='button']:hover,a[type='button']:visited,
+ a[type='button']:active, input[type='submit'] {
+  --base-margin: 0.5em;
+  --margin-LR:var(--base-margin);
+  --margin-bottom:var(--base-margin);
+  --border-bottom:0.4em;
+
+  /* --border-left:(calc(calc(var(--border-bottom) * 2) / 3));
+  --border-right:(calc(calc(var(--border-bottom) * 2)  / 3)); */
+}
+
+
+a[type='button'], input[type='submit'], button[type='submit'] {
+  display: inline-block;
+  flex-grow:1;
+  flex-shrink: 1;
+  line-height: 1em;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: var(--color-complement-2);
+  font-family: "TenbyFive", serif;
+  text-decoration: none;
+  padding: 0.2em 0.5em;
+  font-weight: bold;
+
+  /* border-left: 0.1667em solid var(--color-complement-3);
+  border-left: var(--border-left) solid var(--color-complement-3);
+
+  border-right: 0.1667em solid var(--color-complement-3);
+  border-right: var(--border-right) solid var(--color-complement-3); */
+  border-left: unset;
+  border-right: unset;
+  border-top: unset;
+  border-bottom: 0.25em solid var(--color-complement-4);
+  border-bottom: var(--border-bottom) solid var(--color-complement-4);
+  /* margin:0.5em; */
+}
+a[type='button']:link, input[type='submit'], button {
+  color:black;
+}
+a[type='button']:visited {
+
+}
+a[type='button']:hover, input[type='submit']:hover, button[type='submit']:hover{
+  background-color: var(--color-complement-1);  
+  border-bottom: var(--border-bottom) solid var(--color-complement-3);
+  cursor: pointer;
+}
+a[type='button']:active {
+
+
+  border-bottom: calc(var(--border-bottom) / 2) solid var(--color-complement-3);
+
+  margin-top: calc(0.5em + calc(var(--border-bottom) / 2));
+
+}
