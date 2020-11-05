@@ -30,7 +30,6 @@ if (NODE_ENV === "production") {
   server.use(express.static(HTML_ROOT));
   server.get("*", (req, res) => {
     // console.log("is user authenticated",req.isAuthenticated() || "NO")
-    res.send(AppDocument);
   });
 }
 
