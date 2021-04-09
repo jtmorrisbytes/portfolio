@@ -12,7 +12,7 @@ const Banner = (props) => {
     <>
       <a id="to-about"></a>
       <Card id="Banner">
-        <img className="avatar" src={props.user.avatar_url} />
+        <img className="avatar" src={props.user.avatarUrl} />
         <div className="info">
           <h1 className="name">{props.user.name}</h1>
           {/* add padding after the name */}

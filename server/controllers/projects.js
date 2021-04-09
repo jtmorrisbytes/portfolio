@@ -26,7 +26,44 @@ projects.use((req, res, next) => {
 projects.get("/", (req, res) => {
   // get all projects listed in the database
   octoGraphql(
-    "{viewer {\nrepositories(first:100,privacy:PUBLIC) {\nnodes {\nname\ndescription\nhomepageUrl\nurl\n}\n}\n}\n}"
+    `query { 
+      viewer { 
+        login,
+        name,
+        url,
+        avatarUrl,
+        bio,
+        company,
+        email,
+        isHireable,
+        repositories(privacy:PUBLIC,first:100) {
+         nodes {
+          homepageUrl,
+          name,
+          description,
+          url,
+          primaryLanguage {
+            name
+          }
+        } 
+        }
+        organizations(first:5) {
+          nodes {
+            repositories(privacy:PUBLIC,first:100) {
+              nodes {
+                homepageUrl,
+                name,
+                description,
+                url,
+                primaryLanguage {
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }`
   )
     .then((response) => {
       console.log(response);

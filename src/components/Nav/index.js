@@ -16,9 +16,6 @@ class Nav extends React.Component {
     return (
       <nav id="main-navigation">
         <div className="navigation-container">
-          <div id="brand">
-            <p className="logo-text">Jordan Morris</p>
-          </div>
           {/* <div id="nav-links"> */}
           <a id="projects" href="#to-projects">
             Projects

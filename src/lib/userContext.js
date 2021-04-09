@@ -7,6 +7,7 @@ function UserContext(props) {
   useEffect(() => {
     Axios.get("/api/user")
       .then((response) => {
+        console.log("USERCONTEXT", response)
         setUserView(response.data);
       })
       .catch((e) => {

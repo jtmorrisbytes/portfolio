@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import About from "./components/Banner";
+// import About from "./components/Banner";
 import Nav from "./components/Nav";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+// import Contact from "./components/Contact";
+// import Footer from "./components/Footer";
 import Projects from "./components/Projects/functional";
 
 // import Routes from "./routes";
 
-import { HashRouter, Switch, Route } from "react-router-dom";
+// import { HashRouter, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import Banner from "./components/Banner";
@@ -37,7 +37,6 @@ function App() {
         <Nav user={user} />
         <Banner user={user} />
         <Projects user={user} />
-        <Contact user={user} />
       </UserContext>
     </div>
   );

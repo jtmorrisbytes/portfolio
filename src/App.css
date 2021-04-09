@@ -5,14 +5,16 @@
 /* @import url("./assets/fonts/TenbyFourLight/TenbyFourLight.css"); */
 @import url("./brand-colors.css");
 html {
-  /* font-size: calc(100% + 1vw); */
+  font-size: 100%;
+  font-size: clamp(16px,calc(16px + 1vw),32px);
 }
-
 
 body{
   font-size: 1rem;
 
   /* font-family: Roboto, serif; */
+
+
 }
 body * {
   /* line-height: 1.2rem; */
@@ -31,9 +33,9 @@ div > h1.v-center, div > h2.v-center,  div > h3.v-center, div >  h4.v-center, di
   vertical-align: center;
 }
 #root {
-  background-color: var(--color-complement-0)
+  background-color: var(--color-complement-0);
 }
-/* I want all button to be styled like this */
+/* I want all buttons to be styled like this */
 
 /* the css variables used to help calculate values */
 a[type='button'], a[type='button']:link,
@@ -43,9 +45,6 @@ a[type='button']:hover,a[type='button']:visited,
   --margin-LR:var(--base-margin);
   --margin-bottom:var(--base-margin);
   --border-bottom:0.4em;
-
-  /* --border-left:(calc(calc(var(--border-bottom) * 2) / 3));
-  --border-right:(calc(calc(var(--border-bottom) * 2)  / 3)); */
 }
 
 
@@ -63,11 +62,6 @@ a[type='button'], input[type='submit'], button[type='submit'] {
   padding: 0.2em 0.5em;
   font-weight: bold;
 
-  /* border-left: 0.1667em solid var(--color-complement-3);
-  border-left: var(--border-left) solid var(--color-complement-3);
-
-  border-right: 0.1667em solid var(--color-complement-3);
-  border-right: var(--border-right) solid var(--color-complement-3); */
   border-left: unset;
   border-right: unset;
   border-top: unset;
@@ -77,9 +71,6 @@ a[type='button'], input[type='submit'], button[type='submit'] {
 }
 a[type='button']:link, input[type='submit'], button {
   color:black;
-}
-a[type='button']:visited {
-
 }
 a[type='button']:hover, input[type='submit']:hover, button[type='submit']:hover{
   background-color: var(--color-complement-1);  
@@ -93,4 +84,9 @@ a[type='button']:active {
 
   margin-top: calc(0.5em + calc(var(--border-bottom) / 2));
 
+}
+.App {
+  max-width: 960px;
+  margin-left:auto;
+  margin-right:auto;
 }

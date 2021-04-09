@@ -11,42 +11,8 @@ const mountPath = "/api";
 // setup json parser
 api.use(express.json());
 api.use(require("cookie-parser")());
-// api.use(octoclient());
 
-api.use(["/user", "/projects"], (req, res, next) => {
-  // check that another instance is writing
-  // console.log("user preflight");
-  checkUserLock()
-    .then(() => {
-      const USER_CACHE_SECONDS = req.app.get("user.cacheSeconds") || 60 * 5;
-      const USER_LOCK_TIMEOUT = req.app.get("user.lockTimeout") || 30;
-      redis.P_GET("user").then((reply) => {
-        if (typeof reply === "string") {
-          console.log("parsing user", reply);
-          req.user = JSON.parse(reply);
-          next();
-        } else {
-          return octoClient.users.getAuthenticated().then((r) => {
-            if (r.data?.status > 399) {
-              return Promise.reject(r.data);
-            } else {
-              // numerical value is in seconds
-              return redis
-                .P_SETEX("user", USER_CACHE_SECONDS, JSON.stringify(r.data))
-                .then(() => {
-                  req.user = r.data;
-                  next();
-                });
-            }
-          });
-        }
-      });
-    })
-    .catch((e) => {
-      req.user = {};
-      next(e);
-    });
-});
+
 
 /*
   register a preflight request check to ensure the client

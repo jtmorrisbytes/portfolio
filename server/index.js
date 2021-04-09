@@ -6,13 +6,14 @@ const fs = require("fs");
 const server = express();
 
 const {
-  SERVER_HOST,
-  SERVER_PORT,
-  HOST,
-  PORT,
   DATABASE_URL,
   NODE_ENV,
 } = process.env;
+
+let PORT = process.env.SERVER_PORT || process.env.PORT || 8080;
+let HOST = process.env.SERVER_HOST || process.env.HOST || "0.0.0.0";
+
+
 
 const ROOT = path.join(__dirname, "..");
 const HTML_ROOT = path.join(ROOT, "build");
@@ -42,7 +43,7 @@ massive({
 }).then((db) => {
   // create a reference to the database instance inside server
   server.set("db", db);
-  server.listen(SERVER_PORT || PORT, SERVER_HOST || HOST || "0.0.0.0", () => {
-    console.log(`listenting on ${SERVER_HOST}:${SERVER_PORT}`);
+  server.listen(PORT, HOST || "0.0.0.0", () => {
+    console.log(`listenting on ${HOST}:${PORT}`);
   });
 });
