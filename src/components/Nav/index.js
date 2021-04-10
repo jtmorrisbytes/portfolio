@@ -29,7 +29,7 @@ class Nav extends React.Component {
           </a>
           <a
             id="resume"
-            href="https://docs.google.com/document/d/1mZWsT0AtRXaKzSc4xQb2AX0i0Dh22MHvXrDRbqjDgSY/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1YUacd7AiDdvg1hP2_EvLmSacvXsVHmDc1Wi0NN9CPfE/edit?usp=sharing"
             target="_blank"
           >
             Resume
