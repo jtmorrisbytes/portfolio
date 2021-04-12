@@ -50,7 +50,17 @@
 }
 #Banner .links img {
   max-width: 2em;
+  background-color: white;
+  margin: auto .25em;
 }
+#Banner .links #github-logo {
+  border-radius: 100%;
+}
+#Banner .links #linkedin-logo {
+  border-radius: 5%;
+}
+
+
 
 #Banner .job-title {
   grid-area: t;

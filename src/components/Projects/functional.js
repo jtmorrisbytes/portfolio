@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 import Card from "../Card";
-
+import ProjectCard from "../ProjectCard"
 import "./Projects.css";
 
 function fetchRepositiories(itemsPerPage = 10, cursor) {
-  return Axios.get(`/api/projects?first=${itemsPerPage}${cursor ? cursor : ""}`)
+  return Axios.get(`/api/data?first=${itemsPerPage}${cursor ? cursor : ""}`)
     .then((response) => {
       return response.data;
     })
@@ -21,33 +21,61 @@ function renderProjects(array) {
   if (array.length === 0) {
     return (
       <div className="no-content">
-        <h2>No projects to show yet, please come back later!</h2>
+        <h2>No data to show yet, please come back later!</h2>
       </div>
     );
   } else {
     return array.map((p) => {
       return (
-        <div className="Project Card">
-          <h2>{p.name}</h2>
-          <span>{p.description}</span>
-          <span>{p.homepage}</span>
-        </div>
+        <ProjectCard ></ProjectCard>
       );
     });
   }
 }
 
 function Projects(props) {
-  const [projects, setProjects] = useState([]);
+  const [data, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   useEffect(() => {
-    fetchRepositiories(itemsPerPage).then(setProjects);
-  }, []);
+    // starts with a loading state, then fetches with a timeout
+    Axios.get(`/api/projects?first=${itemsPerPage}`, { timeout: 10000 })
+      .then((response) => {
+        setProjects(response.data);
+        setLoading(false);
+      })
+      .catch((e) => {
+        console.log(e);
+        setError(e);
+        setLoading(false);
 
+      });
+  }, []);
+  if (loading) {
+    return (
+      <Card id="Projects">
+        <div className="loading">Fetching Projects</div>
+      </Card>
+    );
+  }
+  if (error) {
+    return (
+      <Card id="Projects">
+        <div className="error">Fetching Failed!</div>
+      </Card>
+    );
+  }
   return (
-    <Card id="Projects" className="">
-      <div className="Container">{renderProjects(projects)}</div>
-    </Card>
+    <div className="Projects">
+      <h2>My Work</h2>
+      {Object.entries(data.jtmorrisbytes).map(([key, project]) => {
+        console.log(project);
+        return (
+         <ProjectCard key = {key} sourceUrl={project.url} login={props.user.login} liveUrl={props.homepageUrl} name={project.name} liveUrl={project.homepageUrl}/>
+        );
+      })}
+    </div> 
   );
 }
 

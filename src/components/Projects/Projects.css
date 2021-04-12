@@ -1,15 +1,15 @@
-div#Projects {
-  /* margin-top:0.25em; */
-  /* margin-bottom:0.25em; */
-  /* background-color: var(--color-primary-3); */
-  /* background: linear-gradient(var(--color-primary-4) 0,var(--color-primary-3) 5%, var(--color-primary-2) 95%, var(--color-primary-1) ); */
+div.Projects {
+  background-color: var(--color-complement-2);
 }
-
-div#Projects .no-content > * {
+div.Projects > .card {
+  /* background-color: var(--color-complement-3); */
+  border: .0125em solid var(--color-complement-4);
+}
+div.Projects .no-content > * {
   text-align: center;
 }
 
-div#Projects > h2 {
+div.Projects > h2 {
   text-align: center;
 }
 

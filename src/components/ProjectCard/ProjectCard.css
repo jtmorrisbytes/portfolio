@@ -45,8 +45,8 @@ div.project-card div.source-links {
 
 }
 div.project-card h2.project-name {
-    font-size:0.9em;
-    font-size:calc(0.9em + 1vw) ;
+    /* font-size:0.9em; */
+    /* font-size:calc(0.9em + 1vw) ; */
 }
 
 div.project-card > div.source-links  a[type='button'] {
@@ -114,7 +114,7 @@ div.project-card a[type='button']:active {
 @media  (min-width:12.5em) {
     div.project-card h2.project-name {
         font-size:0.9125em;
-        font-size: calc(0.9125em + 3.5vw);
+        /* font-size: calc(0.9125em + 3.5vw); */
     }
     div.project-card div.source-links  a[type='button']{
         font-size:calc(0.6em + 1vw);
@@ -135,21 +135,21 @@ div.project-card a[type='button']:active {
 /* this media query targets 375px in EMs */
 @media  (min-width: 23.4375em) {
     div.project-card h2.project-name {
-        font-size: 1.9828125em;
-        font-size: calc(1.9828125em + 3.5vw);
+        /* font-size: 1.9828125em; */
+        /* font-size: calc(1.9828125em + 3.5vw); */
     }
 }
 /* this media query targets 425px in EMs */
 @media  (min-width: 26.5625em) {
     div.project-card h2.project-name {
-        font-size: 1.8421875em;
-        font-size: calc(0.9125em + 3.5vw);
+        /* font-size: 1.8421875em; */
+        /* font-size: calc(0.9125em + 3.5vw); */
     }
 }
 /* this media query targets 768px in EMs */
 @media  (min-width: 48em) {
     div.project-card h2.project-name {
-        font-size: 2.5903125‬em !important;
+        /* font-size: 2.5903125‬em !important; */
     }
  
 }
