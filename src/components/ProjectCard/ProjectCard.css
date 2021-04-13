@@ -25,10 +25,12 @@ div.project-card > img, div.project-card > svg,
 div.project-card > object, div.project-card > iframe, div.project-card embed {
     /* height:var(--image-height); */
     display: block;
-    width:90%;
+    width:100%;
     /* max-width:80%; */
-    /* height:auto; */
+    height:auto;
     /* max-height: 10em; */
+    max-width: 500px;
+
     margin-left: auto;
     margin-right: auto;
 }

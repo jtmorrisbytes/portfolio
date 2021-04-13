@@ -37,7 +37,7 @@ const ProjectCard = (props) => {
       {props.liveUrl ? (
         <img
           className="project-photo"
-          src={`https://image.thum.io/get/auth/39920-c170603da8ed2bea99b4a0731c1b9534/${props.liveUrl}`}
+          src={`https://image.thum.io/get/auth/39920-c170603da8ed2bea99b4a0731c1b9534/width/500/maxAge/5/${props.liveUrl}`}
           alt={props.photoAlt || defaultProjectPhotoAltText}
         />
       ) : (
@@ -47,7 +47,7 @@ const ProjectCard = (props) => {
       <p>{props.description}</p>
       <div className="source-links">
         <Button url={props.liveUrl}>Live View</Button>
-        <Button url={`https://www.github.com/${props.login}/${props.name}`}>
+        <Button url={props.url}>
           View Source
         </Button>
       </div>
@@ -58,7 +58,7 @@ ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   photoUrl: PropTypes.string.isRequired,
   liveUrl: PropTypes.string.isRequired,
-  sourceUrl: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   // cardType: PropTypes.oneOf(["codepen", "github"])
 };
 export default ProjectCard;

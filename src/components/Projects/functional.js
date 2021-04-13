@@ -54,27 +54,32 @@ function Projects(props) {
   }, []);
   if (loading) {
     return (
-      <Card id="Projects">
+      <Card className="Projects">
         <div className="loading">Fetching Projects</div>
       </Card>
     );
   }
   if (error) {
     return (
-      <Card id="Projects">
+      <Card className="Projects">
         <div className="error">Fetching Failed!</div>
       </Card>
     );
   }
   return (
     <div className="Projects">
+      <div className="Section">
       <h2>My Work</h2>
       {Object.entries(data.jtmorrisbytes).map(([key, project]) => {
         console.log(project);
         return (
-         <ProjectCard key = {key} sourceUrl={project.url} login={props.user.login} liveUrl={props.homepageUrl} name={project.name} liveUrl={project.homepageUrl}/>
-        );
-      })}
+          <ProjectCard key = {key} sourceUrl={project.url} login={props.user.login} liveUrl={project.homepageUrl} name={project.name} liveUrl={project.homepageUrl}/>
+          );
+        })}
+        </div>
+      <div className="Section">
+        <h2></h2>
+      </div>
     </div> 
   );
 }
