@@ -9,7 +9,7 @@ div.Projects .no-content > * {
   text-align: center;
 }
 
-div.Projects > h2 {
+div.Projects h2, div.Projects h3 {
   text-align: center;
 }
 

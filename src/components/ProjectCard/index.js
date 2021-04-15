@@ -37,7 +37,7 @@ const ProjectCard = (props) => {
       {props.homepageUrl ? (
         <img
           className="project-photo"
-          src={`https://image.thum.io/get/auth/39920-c170603da8ed2bea99b4a0731c1b9534/width/500/maxAge/5/${props.liveUrl}`}
+          src={`${props.liveUrl}preview/preview-1200x630.png`}
           alt={props.photoAlt || defaultProjectPhotoAltText}
         />
       ) : (

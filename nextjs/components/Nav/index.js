@@ -20,16 +20,10 @@ class Nav extends React.Component {
           <a id="projects" href="#to-projects">
             Projects
           </a>
-          <a id="about" href="#to-about">
-            About
-          </a>
-
-          <a id="contact" href="#to-contact">
-            Contact
-          </a>
           <a
             id="resume"
-            href="https://docs.google.com/document/d/1YUacd7AiDdvg1hP2_EvLmSacvXsVHmDc1Wi0NN9CPfE/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1tftm9gdhzvTsu1TWo0zCRIA-dBtdRJUKJEono18IXPc/edit?usp=sharing"
+            rel="noopener noreferer"
             target="_blank"
           >
             Resume
