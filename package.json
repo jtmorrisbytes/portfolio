@@ -28,6 +28,7 @@
     "passport-github": "^1.1.0",
     "pg": "^7.18.1",
     "prop-types": "^15.7.2",
+    "puppeteer": "^8.0.0",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
     "react-dom": "^16.8.6",

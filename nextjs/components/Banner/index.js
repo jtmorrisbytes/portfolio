@@ -12,9 +12,18 @@ const Banner = (props) => {
     <>
       <a id="to-about"></a>
       <Card id="Banner">
-        <img className="avatar" src={props.user.avatarUrl} />
+        {/* conditionally render profile photo */}
+        {props?.user?.avatarUrl ? (
+          <img className="avatar" src={props?.user?.avatarUrl} />
+        ) : (
+          <img className="avatar" src="https://via.placeholder.com/600x600?" />
+        )}
         <div className="info">
-          <h1 className="name">{props.user.name}</h1>
+          {props?.user?.name ? (
+            <h1 className="name">{props.user.name}</h1>
+          ) : (
+            <h1 className="name">Loading...</h1>
+          )}
           {/* add padding after the name */}
           {/* <div className="subheading"> */}
 
@@ -22,9 +31,9 @@ const Banner = (props) => {
           <a
             className="email"
             target="_blank"
-            href={`mailto:${props.user.email}?subject=portfolio`}
+            href={`mailto:${props?.user.email}?subject=portfolio`}
           >
-            {props.user.email}
+            {props?.user.email}
           </a>
           <br />
           <a className="phone" href={`tel:4697764432`}>
@@ -34,7 +43,7 @@ const Banner = (props) => {
             {/* </div> */}
             <a
               className="github-link"
-              href={props.user.html_url}
+              href={props?.user.html_url}
               target="_blank"
             >
               {/* attempt to use a image set */}
@@ -42,14 +51,14 @@ const Banner = (props) => {
             </a>
             <a
               className="linkedin-link"
-              href={`https://www.linkedin.com/in/${props.user.login}/`}
+              href={`https://www.linkedin.com/in/${props?.user.login}/`}
               target="_blank"
             >
               <img id="linkedin-logo" src={LinkedInLogo} alt="Linked In" />
             </a>
           </div>
         </div>
-        {props.bio ? <p className="bio">{props.bio}</p> : null}
+        {props?.bio ? <p className="bio">{props?.bio}</p> : null}
       </Card>
     </>
   );

@@ -4,11 +4,14 @@ import Axios from "axios";
 const Context = React.createContext({});
 function UserContext(props) {
   const [user, setUserView] = useState({});
+  const [loading,setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true)
     Axios.get("/api/user")
       .then((response) => {
-        console.log("USERCONTEXT", response)
-        setUserView(response.data);
+        // console.log("USERCONTEXT", response)
+        setUserView(response.data || {});
+        setLoading(false)
       })
       .catch((e) => {
         console.error("UserContext.Provider: Error fetching user", e);
