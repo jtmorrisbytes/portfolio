@@ -1,0 +1,164 @@
+div.project-card {
+    background-color: var(--color-primary-1);
+    /* border-radius: 1em; */
+
+    position: relative;
+    /* padding-top: .5em; */
+    padding-bottom:0;
+    
+
+}
+div.project-card > *:not(:last-child) {
+    margin-bottom: .5em;
+}
+
+div.project-card h1, div.project-card h2,
+div.project-card h3, div.project-card h4,
+div.project-card h5, div.project-card h6 {
+    text-align: center;
+    /* height: calc(calc(var(--card-height) / 100) * 10); */
+    margin:0;
+    /* margin-bottom:.5em; */
+}
+
+div.project-card > img, div.project-card > svg,
+div.project-card > object, div.project-card > iframe, div.project-card embed {
+    /* height:var(--image-height); */
+    display: block;
+    width:100%;
+    /* max-width:80%; */
+    height:auto;
+    /* max-height: 10em; */
+    max-width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* style the group of source links */
+div.project-card div.source-links {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    max-width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+div.project-card h2.project-name {
+    /* font-size:0.9em; */
+    /* font-size:calc(0.9em + 1vw) ; */
+}
+
+div.project-card > div.source-links  a[type='button'] {
+    display: inline-block;
+    flex-grow:1;
+    flex-shrink: 1;
+    line-height: 1em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/*
+     style the link buttons
+ */
+
+/* the css variables used to help calculate values */
+div.project-card a[type='button'], div.project-card a[type='button']:link,
+div.project-card a[type='button']:hover, div.project-card a[type='button']:visited,
+div.project-card a[type='button']:active {
+    --base-margin: 0.5em;
+    --margin-LR:var(--base-margin);
+    --margin-bottom:var(--base-margin);
+    --border-bottom:0.4em;
+
+    /* --border-left:(calc(calc(var(--border-bottom) * 2) / 3));
+    --border-right:(calc(calc(var(--border-bottom) * 2)  / 3)); */
+}
+
+
+div.project-card a[type='button'] {
+
+    background-color: var(--color-complement-2);
+
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    font-weight: bold;
+    font-size:0.6em;
+    border-bottom: 0.25em solid var(--color-complement-4);
+    border-bottom: var(--border-bottom) solid var(--color-complement-4);
+    margin:0.5em;
+}
+div.project-card a[type='button']:link {
+    color:black;
+}
+div.project-card a[type='button']:visited {
+    color:black;
+}
+div.project-card a[type='button']:hover {
+    background-color: var(--color-complement-1);
+
+    /* border-left: var(--border-left) solid var(--color-complement-2);
+
+    border-right: var(--border-right) solid var(--color-complement-2); */
+    
+    border-bottom: var(--border-bottom) solid var(--color-complement-3);
+    cursor: pointer;
+}
+div.project-card a[type='button']:active {
+    border-bottom: calc(var(--border-bottom) / 2) solid var(--color-complement-3);
+    margin-top: calc(0.5em + calc(var(--border-bottom) / 2));
+
+}
+/* mobile first! media queries */
+@media  (min-width:12.5em) {
+    div.project-card h2.project-name {
+        font-size:0.9125em;
+        /* font-size: calc(0.9125em + 3.5vw); */
+    }
+    div.project-card div.source-links  a[type='button']{
+        font-size:calc(0.6em + 1vw);
+     }
+
+}
+/* this media query targets 320px in EMs */
+@media  (min-width: 20em) {
+    div.project-card h2.project-name {
+        font-size:1.6125em;
+        font-size: calc(1.1625em + 3.5vw);
+    }
+    div.project-card div.source-links {
+       flex-direction: row;
+    }
+}
+
+/* this media query targets 375px in EMs */
+@media  (min-width: 23.4375em) {
+    div.project-card h2.project-name {
+        /* font-size: 1.9828125em; */
+        /* font-size: calc(1.9828125em + 3.5vw); */
+    }
+}
+/* this media query targets 425px in EMs */
+@media  (min-width: 26.5625em) {
+    div.project-card h2.project-name {
+        /* font-size: 1.8421875em; */
+        /* font-size: calc(0.9125em + 3.5vw); */
+    }
+}
+/* this media query targets 768px in EMs */
+@media  (min-width: 48em) {
+    div.project-card h2.project-name {
+        /* font-size: 2.5903125‬em !important; */
+    }
+ 
+}
+
+/* this media query targets 1440px in EMs */
+@media  (min-width: 90em) {
+    div.project-card div.sourcelinks {
+        font-size: 1.5em;
+    }
+}

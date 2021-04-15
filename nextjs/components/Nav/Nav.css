@@ -1,0 +1,143 @@
+
+
+
+/* 
+    make the navbar have a variable height based on the height of the page
+
+
+*/
+nav#main-navigation {
+    box-sizing: border-box;
+    /* height: 4; */
+    width:100%;
+    padding-left: 1em;
+    padding-right:1em;
+    background-color: var(--color-primary-0);
+    position:sticky;
+    top:0;
+    position:-webkit-sticky;
+    z-index: 9999;
+}
+nav#main-navigation .navigation-container {
+    display:grid;
+    grid-auto-flow: column;
+    /* min-height: 1.2em; */
+    /* min-height: calc(1.1em + 0.5vw); */
+    margin:auto;
+}
+nav#main-navigation * {
+    /* height: 100%; */
+    /* line-height: 2.5rem !important; */
+}
+
+/* 
+The body should take the height 
+   of the fixed navigation into account
+*/
+/* body {
+    padding-top:1.5em !important;
+} */
+nav#main-navigation > .navigation-container > div#brand {
+    display: none;
+    /* flex-basis: 13em; */
+    flex-shrink: 1;
+    /* flex-grow: 1; */
+}
+nav#main-navigation > .navigation-container >div#brand > p {
+    font-family: "TenbyFive", serif;
+}
+
+@media  (min-width:12.5em) {
+    nav#main-navigation > .navigation-container {
+        min-height: 0.612305;
+        
+    }
+}
+@media  (min-width:20em){
+    nav#main-navigation > .navigation-container {
+        /* font-size: 1.1em; */
+        /* font-size: calc(.5em + 1vw); */
+        min-height: 0.9375em;
+        /* min-height: calc(1.1em + 0.5vw); */
+        
+    }
+    nav#main-navigation > .navigation-container >div#brand {
+        display: initial;
+        /* flex-basis: initial; */
+        /* flex-grow: 1; */
+        /* font-size: 1.1em; */
+        /* font-size: calc(.5em + 3vw); */
+    }
+}
+
+@media (min-width: 23.4375em) {
+    nav#main-navigation > .navigation-container {
+        min-height: 0.98945625em;
+    }
+
+}
+@media  (min-width:26.5625em){
+    nav#main-navigation > .navigation-container {
+        /* font-size: 0.98em; */
+        /* font-size: 1.22em; */
+        /* font-size: calc(.5em + 1.5vw); */
+        min-height: 1.12109375‬‬em;
+    }
+}
+@media  (min-width:48em){
+    nav#main-navigation > .navigation-container {
+        /* font-size: 0.98em; */
+        /* font-size: 1.22em; */
+        /* font-size: calc(.5em + 1.75vw); */
+        min-height: 1.12109375‬em;
+    }
+}
+@media  (min-width:64em){
+    nav#main-navigation > .navigation-container {
+        /* font-size: 0.98em; */
+        /* font-size: 1.78em; */
+        /* font-size: calc(.5em + 2vw); */
+        min-height: 2.278em;
+    }
+}
+@media (min-width: 90em) {
+    nav#main-navigation > .navigation-container {
+        min-height: 2.98em;
+        /* font-size:2.3em; */
+    }
+}
+@supports (font-size: calc(1em + 1vw)) {
+nav#main-navigation > .navigation-container {
+        min-height: calc(1.1em + 0.5vw);    
+    }
+}
+nav#main-navigation > .navigation-container > a {
+    text-decoration: none;
+    text-align: center;
+    
+}
+/* nav#main-navigation a {
+    display: inline-block;
+} */
+
+nav#main-navigation > .navigation-container > div#brand > p.logo-text {
+    margin:0px;
+  
+    font-weight: bolder;
+    text-overflow: ellipsis;
+}
+
+/* nav#main div#brand img {
+
+} */
+
+/* TODO: recalculate breakpoints in ems */
+/* 1em + .5vw */
+
+@supports( -moz-appearance: initial) or (display: -ms-grid) {
+    /* This media query targets 200px in EMs */
+
+    /* this media query targets 768px in EMs */
+
+    /* this media query targets 1024px in EMs */
+}

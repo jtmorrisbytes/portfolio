@@ -1,0 +1,5 @@
+body > footer, #root > footer, #root > div.App > footer {
+    background-color: var(--color-complement-4);
+    /* color: var(--color-primary-0); */
+    color:white;
+}

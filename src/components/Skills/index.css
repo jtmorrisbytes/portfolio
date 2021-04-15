@@ -1,0 +1,24 @@
+.Skills > span {
+    font-size: 0.75em;
+}
+.Skills span:first-child {
+    margin-left: auto;
+}
+.Skills span:last-child {
+    margin-right: auto;
+    border-right: none;
+}
+.Skills {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+.Skills span {
+    border-right: .0625em  solid black ;
+    padding-left: .5em;
+    padding-right: .5em;
+}
