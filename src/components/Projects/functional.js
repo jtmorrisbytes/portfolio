@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 import Card from "../Card";
-import ProjectCard from "../ProjectCard"
+import ProjectCard from "../ProjectCard";
 import "./Projects.css";
 
 function fetchRepositiories(itemsPerPage = 10, cursor) {
@@ -26,9 +26,7 @@ function renderProjects(array) {
     );
   } else {
     return array.map((p) => {
-      return (
-        <ProjectCard ></ProjectCard>
-      );
+      return <ProjectCard></ProjectCard>;
     });
   }
 }
@@ -49,7 +47,6 @@ function Projects(props) {
         console.log(e);
         setError(e);
         setLoading(false);
-
       });
   }, []);
   if (loading) {
@@ -69,18 +66,26 @@ function Projects(props) {
   return (
     <div className="Projects">
       <div className="Section">
-      <h2>My Work</h2>
-      {Object.entries(data.jtmorrisbytes).map(([key, project]) => {
-        console.log(project);
-        return (
-          <ProjectCard key = {key} sourceUrl={project.url} login={props.user.login} liveUrl={project.homepageUrl} name={project.name} liveUrl={project.homepageUrl}/>
+        <h2>My Work</h2>
+        {Object.entries(data.jtmorrisbytes).map(([key, project]) => {
+          console.log(project);
+          return (
+            <ProjectCard
+              key={key}
+              url={project.url}
+              login={props.user.login}
+              homepageUrl={project.homepageUrl}
+              name={project.name}
+              liveUrl={project.homepageUrl}
+              description={props.description}
+            />
           );
         })}
-        </div>
+      </div>
       <div className="Section">
         <h2></h2>
       </div>
-    </div> 
+    </div>
   );
 }
 

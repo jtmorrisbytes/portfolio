@@ -5,9 +5,14 @@
 -- Create a table to hold a list of projects to be displayed from github
 CREATE TABLE IF NOT EXISTS projects (
     project_id SERIAL PRIMARY KEY,
-    title VARCHAR(25),
-    blog_post text,
-    hosted_link text
+    title VARCHAR(25) NOT NULL,
+    description TEXT NOT NULL,
+    home_page_url TEXT,
+    url TEXT,
+
+
+
+    primary_language TEXT NOT NULL,
 );
 
 
@@ -27,6 +32,11 @@ CREATE TABLE IF NOT EXISTS users (
     -- link to the youtube channel
     youtube_channel_url VARCHAR(10240),
     -- link to the portfolio website
-    homepage VARCHAR(10240)
+    homepage VARCHAR(10240),
+    phone_number UNIQUE
 
+);
+CREATE TABLE IF NOT EXISTS education (
+    id SERIAL PRIMARY KEY,
+    institution TEXT NOT NULL 
 )

@@ -10,12 +10,16 @@
     "a"
     "i"
     "lnk"
+    "sk"
     "b";
 }
 #Banner .info {
   grid-area: i;
   padding-left: 0.25em;
   padding-right: 0.25em;
+}
+#Banner .Skills {
+  grid-area: sk;
 }
 #Banner .name {
   grid-area: n;
@@ -79,6 +83,8 @@
     font-size: clamp(1em,32px);
     grid-template-rows: 9em;
     grid-template-columns: 1fr 10.5em auto 1fr;
-    grid-template-areas: ". a i .";
+    grid-template-areas: ". a  i  ."
+                         ". sk sk ."
+                         ". b  b  .";
   }
 }

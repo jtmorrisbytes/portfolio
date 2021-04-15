@@ -6,6 +6,7 @@ import GithubMark from "../../assets/img/GitHub-Mark/PNG/GitHub-Mark-120px-plus.
 import LinkedInLogo from "../../assets/img/LinkedIn-Logos/In/Digital/Blue/1x/In-Blue-128.png";
 
 import { connect } from "../../lib/userContext";
+import Skills from "../Skills";
 
 const Banner = (props) => {
   return (
@@ -49,6 +50,7 @@ const Banner = (props) => {
             </a>
           </div>
         </div>
+        <Skills />
         {props.bio ? <p className="bio">{props.bio}</p> : null}
       </Card>
     </>

@@ -34,7 +34,7 @@ const ProjectCard = (props) => {
       <h3 className="project-name">
         {props.displayName || props.name || defaultProjectName}
       </h3>
-      {props.liveUrl ? (
+      {props.homepageUrl ? (
         <img
           className="project-photo"
           src={`https://image.thum.io/get/auth/39920-c170603da8ed2bea99b4a0731c1b9534/width/500/maxAge/5/${props.liveUrl}`}
@@ -46,7 +46,7 @@ const ProjectCard = (props) => {
 
       <p>{props.description}</p>
       <div className="source-links">
-        <Button url={props.liveUrl}>Live View</Button>
+        <Button url={props.homepageUrl}>Live View</Button>
         <Button url={props.url}>
           View Source
         </Button>
@@ -57,7 +57,7 @@ const ProjectCard = (props) => {
 ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   photoUrl: PropTypes.string.isRequired,
-  liveUrl: PropTypes.string.isRequired,
+  homepageUrl: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   // cardType: PropTypes.oneOf(["codepen", "github"])
 };

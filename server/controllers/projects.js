@@ -1,12 +1,12 @@
 console.log("posts router starting up");
 const express = require("express");
-const octoclient = require("../lib/octoclient");
-const axios = require("axios");
+// const octoclient = require("../lib/octoclient");
+// const axios = require("axios");
 const octoGraphql = require("../lib/octoGraphql");
 const { default: Axios } = require("axios");
 
-const cheerio = require("cheerio");
-const { rpop } = require("../lib/redis");
+// const cheerio = require("cheerio");
+// const { rpop } = require("../lib/redis");
 
 const mountPath = "/projects";
 const projects = express.Router();
