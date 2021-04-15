@@ -28,6 +28,7 @@ server.use(api.path, api.router);
 
 if (NODE_ENV === "production") {
   // serve static in production
+  server.use("/preview",express.static(path.join(process.cwd(),"preview")));
   server.use(express.static(HTML_ROOT));
   server.get("*", (req, res) => {
     // console.log("is user authenticated",req.isAuthenticated() || "NO")

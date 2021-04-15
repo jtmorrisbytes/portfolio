@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 // import Contact from "./components/Contact";
 // import Footer from "./components/Footer";
 import Projects from "./components/Projects/functional";
-
+// import "../public/preview-960.png"
 // import Routes from "./routes";
 
 // import { HashRouter, Switch, Route } from "react-router-dom";
